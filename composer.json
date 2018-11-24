@@ -20,5 +20,15 @@
             "Hamedmehryar\\SessionTracker\\": "src/"
         }
     },
-    "minimum-stability": "stable"
+    "minimum-stability": "stable",
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Hamedmehryar\\SessionTracker\\SessionTrackerServiceProvider"
+            ],
+            "aliases": {
+                "SessionTracker": "Hamedmehryar\\SessionTracker\\SessionTrackerFacade"
+            }
+        }
+    }
 }
