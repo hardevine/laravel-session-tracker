@@ -1,5 +1,5 @@
 {
-    "name": "hamedmehryar/laravel-session-tracker",
+    "name": "hardevine/laravel-session-tracker",
     "description": "This package provides session tracking functionalities, multisession management and user device management features for laravel applications.",
     "type": "library",
     "require": {
