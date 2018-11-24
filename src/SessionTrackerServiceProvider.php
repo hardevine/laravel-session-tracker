@@ -30,8 +30,9 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
+		$config = __DIR__ . '/../config/config.php';
 		$this->mergeConfigFrom(
-			base_path('vendor/hamedmehryar/laravel-session-tracker/src/config/config.php'), 'sessionTracker'
+			$config, 'sessionTracker'
 		);
 		$this->registerSessionTracker();
 		$this->registerAuthenticationEventHandler();
