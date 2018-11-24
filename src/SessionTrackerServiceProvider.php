@@ -16,7 +16,7 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 			__DIR__ . '/../config/cart.php' => config_path('sessionTracker.php')],'config');
 		
 		$this->publishes([
-			__DIR__.'/../migrations') => base_path('database/migrations')
+			__DIR__.'/../migrations' => base_path('database/migrations')
 		],'migrations');
 
 		$router = $this->app['router'];
