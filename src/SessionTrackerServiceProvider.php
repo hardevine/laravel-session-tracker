@@ -13,10 +13,10 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->publishes([
-			__DIR__ . '/../config/cart.php' => config_path('sessionTracker.php')],'config');
+			__DIR__ . '/config/cart.php' => config_path('sessionTracker.php')],'config');
 		
 		$this->publishes([
-			__DIR__.'/../migrations' => base_path('database/migrations')
+			__DIR__.'/migrations' => base_path('database/migrations')
 		],'migrations');
 
 		$router = $this->app['router'];
@@ -30,7 +30,7 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{
-		$config = __DIR__ . '/../config/config.php';
+		$config = __DIR__ . '/config/config.php';
 		$this->mergeConfigFrom(
 			$config, 'sessionTracker'
 		);
