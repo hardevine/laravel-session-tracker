@@ -13,9 +13,11 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->publishes([
-			base_path('vendor/hamedmehryar/laravel-session-tracker/src/config/config.php') => config_path('sessionTracker.php'),
-			base_path('vendor/hamedmehryar/laravel-session-tracker/src/migrations') => base_path('database/migrations')
-		]);
+			__DIR__ . '/../config/cart.php' => config_path('sessionTracker.php')],'config');
+		
+		$this->publishes([
+			__DIR__.'/../migrations') => base_path('database/migrations')
+		],'migrations');
 
 		$router = $this->app['router'];
 		$router->middleware('session', 'Hamedmehryar\SessionTracker\Middleware\SessionTracker');
