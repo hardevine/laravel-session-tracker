@@ -20,6 +20,8 @@ In composer.json:
 Run:
 
     composer update
+    
+Note: For v  5.5 Auto-discovery takes care.
 
 Add the service provider to `config/app.php` under `providers`:
 
