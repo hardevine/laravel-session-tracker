@@ -13,7 +13,7 @@ class SessionTrackerServiceProvider extends ServiceProvider {
 	public function boot()
 	{
 		$this->publishes([
-			__DIR__ . '/config/cart.php' => config_path('sessionTracker.php')],'config');
+			__DIR__ . '/config/config.php' => config_path('sessionTracker.php')],'config');
 		
 		$this->publishes([
 			__DIR__.'/migrations' => base_path('database/migrations')
