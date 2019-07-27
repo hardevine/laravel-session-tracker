@@ -5,7 +5,7 @@
     "require": {
         "php": ">=5.4.0",
         "laravel/framework": ">5.0",
-        "nesbot/carbon": "~1.0",
+        "nesbot/carbon": "~1.0 || ^2.0",
         "jenssegers/agent": "^2.3"
     },
     "license": "MIT",
